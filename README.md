@@ -17,7 +17,7 @@ Click on degrees units at the top tile to change degrees units.
 
 Steps to get started:
 => Clone Repository: git clone https://github.com/TusharAwate/WeatherAppAssignment
-=> cd weather-app-lbg-assignment
+=> cd WeatherAppAssignment
 => npm install
 => npm start
 => visit http://localhost:3000/
