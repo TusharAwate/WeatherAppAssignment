@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+.current-weather__data--max, .current-weather__data--current, .current-weather__data--min, .current-weather__date-loc--date, .current-weather__date-loc--loc, .forecast__tile--deg, .forecast__tile--time, .day__label, .day__max, .day__min {
+  color: #fff;
+  font-family: Helvetica, sans-serif; }
+
+.weather-widget {
+  background-color: #777777;
+  width: 550px;
+  padding: 20px 30px;
+  margin: 0 auto; }
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px; }
+  .current-weather__data {
+    width: 140px; }
+    .current-weather__data--max {
+      font-size: 18px; }
+    .current-weather__data--current {
+      font-weight: 700;
+      font-size: 40px; }
+      .current-weather__data--current span {
+        cursor: pointer; }
+    .current-weather__data--min {
+      font-size: 18px; }
+  .current-weather__date-loc {
+    width: 140px;
+    text-align: right;
+    text-transform: uppercase; }
+    .current-weather__date-loc--date {
+      font-size: 18px;
+      margin-bottom: 5px;
+      text-align: right; }
+    .current-weather__date-loc--loc {
+      font-style: 18px;
+      font-weight: 700; }
+
+.forecast {
+  display: flex;
+  margin-bottom: 15px; }
+  .forecast__tile {
+    padding: 10px;
+    flex: 1 0 0; }
+    .forecast__tile:nth-child(2n) {
+      background-color: #646363; }
+    .forecast__tile--deg {
+      font-size: 16px;
+      text-align: center; }
+    .forecast__tile--icon {
+      display: block;
+      margin: 0 auto;
+      width: 30px; }
+    .forecast__tile--time {
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      color: #06A9ED; }
+
+.days {
+  display: flex;
+  border: 2px solid black; }
+
+.day:hover {
+  background-color: black; }
+  .day:hover:nth-child(2n) {
+    background-color: black; }
+
+.day {
+  flex: 1 0 0;
+  cursor: pointer;
+  background-color: #777777;
+  padding: 10px;
+  width: 70px; }
+  .day:nth-child(2n) {
+    background-color: #646363; }
+  .day__label {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 15px; }
+  .day__icon {
+    display: block;
+    margin: 0 auto 35px; }
+  .day__max {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center; }
+  .day__min {
+    font-weight: 700;
+    font-size: 16px;
+    color: #06A9ED;
+    text-align: center; }

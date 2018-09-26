@@ -1,0 +1,131 @@
+@import 'constants';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+%font-shared {
+    color: $font-color;
+    font-family: $font-stack;
+}
+
+.weather-widget {
+    background-color: $primary-dark;
+    width: 550px;
+    padding: 20px 30px;
+    margin: 0 auto;
+}
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    &__data {
+        width: 140px;
+        &--max {
+            @extend %font-shared;
+            font-size: 18px;
+        }
+        &--current {
+            @extend %font-shared;
+            font-weight: 700;
+            font-size: 40px;
+            span {
+                cursor: pointer;
+            }
+        }
+        &--min {
+            @extend %font-shared;
+            font-size: 18px;
+        }
+    }
+    &__date-loc {
+        width:  140px;
+        text-align: right;
+        text-transform: uppercase;
+        &--date {
+            @extend %font-shared;
+            font-size: 18px;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        &--loc {
+            @extend %font-shared;
+            font-style: 18px;
+            font-weight: 700;
+        }
+    }
+}
+.forecast {
+    display: flex;
+    margin-bottom: 15px;
+    &__tile {
+        padding: 10px;
+        flex: 1 0 0;
+        &:nth-child(2n) {
+            background-color: $secondary-dark;
+        }
+        &--deg {
+            @extend %font-shared;
+            font-size: 16px;
+            text-align: center;
+        }
+        &--icon {
+            display: block;
+            margin: 0 auto;
+            width: 30px;
+        }
+        &--time {
+            @extend %font-shared;
+            text-align: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: $font-color-secondary;
+        }
+    }
+}
+.days {
+    display: flex;
+    border: 2px solid black;
+}
+.day:hover {
+    background-color: black;
+    &:nth-child(2n) {
+        background-color: black;
+    }
+}
+.day {
+    flex: 1 0 0;
+    cursor: pointer;
+    background-color: $primary-dark;
+    padding: 10px;
+    width: 70px;
+    &:nth-child(2n) {
+        background-color: $secondary-dark;
+    }
+    &__label {
+        text-align: center;
+        text-transform: uppercase;
+        @extend %font-shared;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    &__icon {
+        display: block;
+        margin: 0 auto 35px;
+    }
+    &__max {
+        @extend %font-shared;
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+    }
+    &__min {
+        @extend %font-shared;
+        font-weight: 700;
+        font-size: 16px;
+        color: $font-color-secondary;
+        text-align: center;
+    }
+}
